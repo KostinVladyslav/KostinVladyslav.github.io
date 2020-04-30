@@ -1,0 +1,372 @@
+body {
+  font-family: Refsan;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+/*шрифт*/
+@font-face {
+  font-family: Refsan; /* Гарнитура шрифта */
+  src: url(./font/REFSAN.ttf); /* Путь к файлу со шрифтом */
+  src: local(REFSAN), url(./font/REFSAN.ttf);
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*Container*/
+
+/*1 блок страниці*/
+.intro {
+  height: auto;
+  background: url(./images/fon2_01.jpg) no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%;
+}
+/*Активность первой кнопки*/
+a.button1:hover {
+  color: rgb(24, 24, 24);
+  border: 1px solid rgb(198, 198, 198);
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+a.button1:active {
+  color: rgb(51, 51, 51);
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(238, 238, 238)
+    linear-gradient(rgb(238, 238, 238), rgb(224, 224, 224));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+/*Активность второй кнопки*/
+a.button2:hover {
+  color: rgb(24, 24, 24);
+  border: 1px solid rgb(198, 198, 198);
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+a.button2:active {
+  color: rgb(51, 51, 51);
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(238, 238, 238)
+    linear-gradient(rgb(238, 238, 238), rgb(224, 224, 224));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+/*Работа над хедером*/
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: 1%;
+}
+.header__index {
+  display: flex;
+  justify-content: space-between;
+}
+/*Активное состояние третей кнопки*/
+.button3:active {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: black;
+  text-decoration: none;
+}
+@media (min-width: 320px) {
+  /*Характеристики первой кнопки*/
+  a.button1 {
+    display: inline-block;
+    font-family: Refsan;
+    font-size: 65%;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    padding: 0.2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all 0.218s ease 0s;
+    margin-top: 1%;
+  }
+  /*Характеристики второй кнопки*/
+  a.button2 {
+    display: inline-block;
+    font-family: Refsan;
+    font-size: 60%;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    padding: 0.2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all 0.218s ease 0s;
+    margin-top: 1%;
+  }
+
+  .button3 {
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    color: black;
+    border: 2px solid black;
+    font-size: 70%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: inline-block;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    text-decoration: none;
+  }
+  /*Наведение на переключатель стилей 1 блок*/
+  .button3:hover {
+    font-size: 70%;
+    border-radius: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+    text-decoration: none;
+  }
+  .gmail {
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 40%;
+    margin-top: 0.01%;
+    margin-bottom: 0.01%;
+  }
+}
+@media (min-width: 760px) {
+  /*Характеристики первой кнопки*/
+  a.button1 {
+    display: inline-block;
+    font-family: Refsan;
+    font-size: 90%;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    padding: 0.2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all 0.218s ease 0s;
+    margin-top: 1%;
+  }
+  /*Характеристики второй кнопки*/
+  a.button2 {
+    display: inline-block;
+    font-family: Refsan;
+    font-size: 90%;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    padding: 0.2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all 0.218s ease 0s;
+    margin-top: 1%;
+  }
+  /*Подпись фото в 1 блоке*/
+
+  .button3 {
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    color: black;
+    border: 2px solid black;
+    font-size: 130%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: inline-block;
+    margin-top: 6%;
+    margin-bottom: 1%;
+    text-decoration: none;
+  }
+  /*Наведение на переключатель стилей 1 блок*/
+  .button3:hover {
+    font-size: 130%;
+    border-radius: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+    text-decoration: none;
+  }
+  iframe {
+    width: 480px;
+    height: 320px;
+  }
+  .gmail {
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 85%;
+    margin-top: 0.01%;
+    margin-bottom: 0.01%;
+  }
+}
+@media (min-width: 1200px) {
+  /*Характеристики первой кнопки*/
+  a.button1 {
+    display: inline-block;
+    font-family: Refsan;
+    font-size: 130%;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    padding: 0.2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all 0.218s ease 0s;
+    margin-top: 1%;
+  }
+  /*Характеристики второй кнопки*/
+  a.button2 {
+    display: inline-block;
+    font-family: Refsan;
+    font-size: 130%;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    padding: 0.2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all 0.218s ease 0s;
+    margin-top: 1%;
+  }
+  /*Подпись фото в 1 блоке*/
+
+  .button3 {
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    color: black;
+    border: 2px solid black;
+    font-size: 150%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: inline-block;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    text-decoration: none;
+  }
+  /*Наведение на переключатель стилей 1 блок*/
+  .button3:hover {
+    font-size: 150%;
+    border-radius: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+    text-decoration: none;
+  }
+  iframe {
+    width: 640px;
+    height: 480px;
+  }
+  .gmail {
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 100%;
+    margin-top: 0.01%;
+    margin-bottom: 0.01%;
+  }
+}
+.label-mod {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.label-mod input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(146, 144, 141);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1p rgb(179, 113, 59);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.container1 {
+  margin-top: 6%;
+}
+
+.gmail:active {
+  color: black;
+  text-decoration: none;
+}
+.gmail:hover {
+  color: black;
+  text-decoration: none;
+}

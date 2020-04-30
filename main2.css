@@ -1,0 +1,705 @@
+body {
+    font-family: monospace;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  /*шрифт*/
+  @font-face {
+    font-family: Refsan; /* Гарнитура шрифта */
+    src: url(./font/REFSAN.ttf); /* Путь к файлу со шрифтом */
+    src: local(REFSAN), url(./font/REFSAN.ttf);
+  }
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /*Container*/
+  
+  /*1 блок страниці*/
+  .intro {
+    height: auto;
+    background: url(./images/fon2_02.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+  }
+  /*Активность первой кнопки*/
+  a.button1:hover {
+    color: rgb(24, 24, 24);
+    border: 1px solid rgb(198, 198, 198);
+    background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  a.button1:active {
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(238, 238, 238)
+      linear-gradient(rgb(238, 238, 238), rgb(224, 224, 224));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  }
+  /*Активность второй кнопки*/
+  a.button2:hover {
+    color: rgb(24, 24, 24);
+    border: 1px solid rgb(198, 198, 198);
+    background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  a.button2:active {
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(238, 238, 238)
+      linear-gradient(rgb(238, 238, 238), rgb(224, 224, 224));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  }
+  /*Работа над хедером*/
+  .header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 1%;
+  }
+  .header__index {
+    display: flex;
+    justify-content: space-between;
+  }
+  /*Активное состояние третей кнопки*/
+  .button3:active {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+    text-decoration: none;
+  }
+  /*Отступі у заголовка "Предметы"*/
+  .container3 {
+    margin-top: 3.5%;
+    margin-bottom: 1%;
+  }
+  /*" блок белый фон*/
+  .intro2 {
+    height: auto;
+    background: white;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+  }
+  /*3 блок фильмов*/
+  .film {
+    height: auto;
+    background: url(./images/filmfon2.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+  }
+  
+  @media (min-width: 320px) {
+    /*Характеристики первой кнопки*/
+    a.button1 {
+      display: inline-block;
+      font-family: Refsan;
+      font-size: 65%;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      user-select: none;
+      padding: 0.2em 1.2em;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+      transition: all 0.218s ease 0s;
+      margin-top: 1%;
+    }
+    /*Характеристики второй кнопки*/
+    a.button2 {
+      display: inline-block;
+      font-family: Refsan;
+      font-size: 60%;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      user-select: none;
+      padding: 0.2em 1.2em;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+      transition: all 0.218s ease 0s;
+      margin-top: 1%;
+    }
+    /*Подпись фото в 1 блоке*/
+    .p1 {
+      text-align: center;
+      font-size: 80%;
+      color: white;
+      line-height: 100%;
+    }
+    /*Таблица 2 блок*/
+    .tables {
+      width: 75%;
+      font-size: 80%;
+      margin-bottom: 4%;
+    }
+    /*Подписи под фото 3 блок*/
+    figcaption {
+      font-size: 50%;
+  
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    /*Заголовок 3 блок*/
+    .p3 {
+      font-size: 90%;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      margin-top: 3%;
+      margin-bottom: 1%;
+    }
+    /*Заголовок 2 блок*/
+    .p2 {
+      font-size: 90%;
+      font-weight: bold;
+    }
+    /*Заголовок 4 блок*/
+    .p4 {
+      font-size: 90%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+    /*Текст 4 блок*/
+    .p5 {
+      font-size: 50%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      border: 4px solid black;
+      border-radius: 8%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+  
+    /*Цитата 4 блок*/
+    blockquote {
+      font-size: 50%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      border: 4px solid black;
+      border-radius: 8%;
+      padding-top: 1.5%;
+      padding-bottom: 1.5%;
+      padding-left: 0.8%;
+      padding-right: 1%;
+      margin-top: 4%;
+      margin-bottom: 4%;
+    }
+    /*\Заголовок 5 блок*/
+    .p6 {
+      font-size: 90%;
+  
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5%;
+      margin-bottom: 2%;
+      color: white;
+    }
+    /*Почта*/
+    .gmail {
+      float: right;
+      text-decoration: none;
+      color: black;
+      font-size: 40%;
+      margin-top: 0.01%;
+      margin-bottom: 0.01%;
+    }
+    /*Текст 5 блок*/
+    .p7 {
+      font-size: 45%;
+  
+      text-align: center;
+  
+      margin-top: 2%;
+      margin-bottom: 0.5%;
+      color: white;
+      text-align: justify;
+    }
+    /*Переключатель стилей 1 блок*/
+    .button3 {
+      border-radius: 50%;
+      background-color: #e7e7e7;
+      color: black;
+      border: 2px solid black;
+      font-size: 70%;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      display: inline-block;
+      margin-top: 8%;
+      margin-bottom: 1%;
+      text-decoration: none;
+    }
+    /*Наведение на переключатель стилей 1 блок*/
+    .button3:hover {
+      font-size: 70%;
+      border-radius: 50%;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      color: black;
+      text-decoration: none;
+    }
+  }
+  /* на md */
+  @media (min-width: 760px) {
+    /*Характеристики первой кнопки*/
+    a.button1 {
+      display: inline-block;
+      font-family: Refsan;
+      font-size: 90%;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      user-select: none;
+      padding: 0.2em 1.2em;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+      transition: all 0.218s ease 0s;
+      margin-top: 1%;
+    }
+    /*Характеристики второй кнопки*/
+    a.button2 {
+      display: inline-block;
+      font-family: Refsan;
+      font-size: 90%;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      user-select: none;
+      padding: 0.2em 1.2em;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+      transition: all 0.218s ease 0s;
+      margin-top: 1%;
+    }
+    /*Подпись фото в 1 блоке*/
+    .p1 {
+      text-align: center;
+      font-size: 110%;
+      color: white;
+      line-height: 100%;
+    }
+    /*Таблица 2 блок*/
+    .tables {
+      width: 75%;
+      font-size: 100%;
+      margin-bottom: 4%;
+    }
+    /*Подписи под фото 3 блок*/
+    figcaption {
+      font-size: 80%;
+  
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    /*Заголовок 3 блок*/
+    .p3 {
+      font-size: 150%;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      margin-top: 5%;
+      margin-bottom: 2%;
+    }
+    /*Заголовок 2 блок*/
+    .p2 {
+      font-size: 130%;
+      font-weight: bold;
+    }
+    /*Заголовок 4 блок*/
+    .p4 {
+      font-size: 150%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5%;
+      margin-bottom: 2%;
+    }
+    /*Текст 4 блок*/
+    .p5 {
+      font-size: 110%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      border: 4px solid black;
+      border-radius: 8%;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    /*Цитата 4 блок*/
+    blockquote {
+      font-size: 110%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      border: 4px solid black;
+      border-radius: 8%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 0.1%;
+      padding-right: 0.1%;
+      margin-top: 4%;
+      margin-bottom: 2%;
+    }
+    /*\Заголовок 5 блок*/
+    .p6 {
+      font-size: 150%;
+  
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5%;
+      margin-bottom: 2%;
+      color: white;
+    }
+    /*Почта*/
+    .gmail {
+      float: right;
+      text-decoration: none;
+      color: black;
+      font-size: 85%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+    /*Текст 5 блок*/
+    .p7 {
+      font-size: 85%;
+  
+      text-align: center;
+  
+      margin-top: 3%;
+      margin-bottom: 2%;
+      color: white;
+      text-align: justify;
+    }
+    /*Переключатель стилей 1 блок*/
+    .button3 {
+      border-radius: 50%;
+      background-color: #e7e7e7;
+      color: black;
+      border: 2px solid black;
+      font-size: 130%;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      display: inline-block;
+      margin-top: 6%;
+      margin-bottom: 1%;
+      text-decoration: none;
+    }
+    /*Наведение на переключатель стилей 1 блок*/
+    .button3:hover {
+      font-size: 130%;
+      border-radius: 50%;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      color: black;
+      text-decoration: none;
+    }
+  }
+  /* на lg */
+  @media (min-width: 1200px) {
+    /*Характеристики первой кнопки*/
+    a.button1 {
+      display: inline-block;
+      font-family: Refsan;
+      font-size: 130%;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      user-select: none;
+      padding: 0.2em 1.2em;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+      transition: all 0.218s ease 0s;
+      margin-top: 1%;
+    }
+    /*Характеристики второй кнопки*/
+    a.button2 {
+      display: inline-block;
+      font-family: Refsan;
+      font-size: 130%;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      user-select: none;
+      padding: 0.2em 1.2em;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+      transition: all 0.218s ease 0s;
+      margin-top: 1%;
+    }
+    /*Подпись фото в 1 блоке*/
+    .p1 {
+      text-align: center;
+      font-size: 110%;
+      color: white;
+      line-height: 100%;
+    }
+    /*Таблица 2 блок*/
+    .tables {
+      width: 75%;
+      font-size: 120%;
+      margin-bottom: 4%;
+    }
+    /*Подписи под фото 3 блок*/
+    figcaption {
+      font-size: 100%;
+  
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    /*Заголовок 3 блок*/
+    .p3 {
+      font-size: 180%;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      margin-top: 5%;
+      margin-bottom: 2%;
+    }
+    /*Заголовок 2 блок*/
+    .p2 {
+      font-size: 180%;
+      font-weight: bold;
+    }
+    /*Заголовок 4 блок*/
+    .p4 {
+      font-size: 180%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5%;
+      margin-bottom: 2%;
+    }
+    /*Текст 4 блок*/
+    .p5 {
+      font-size: 140%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      border: 4px solid black;
+      border-radius: 8%;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      padding-left: 1.5%;
+      padding-right: 1.5%;
+    }
+    /*Цитата 4 блок*/
+    blockquote {
+      font-size: 140%;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      border: 4px solid black;
+      border-radius: 8%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 1%;
+      padding-right: 1.5%;
+      margin-top: 4%;
+      margin-bottom: 2%;
+    }
+    /*Заголовок 5 блок*/
+    .p6 {
+      font-size: 180%;
+  
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5%;
+      margin-bottom: 2%;
+      color: white;
+    }
+    /*Почта*/
+    .gmail {
+      float: right;
+      text-decoration: none;
+      color: black;
+      font-size: 100%;
+      margin-top: 0.3%;
+      margin-bottom: 1%;
+      margin-right: 0;
+    }
+    /*Текст 5 блок*/
+    .p7 {
+      font-size: 100%;
+  
+      text-align: center;
+  
+      margin-top: 5%;
+      margin-bottom: 1%;
+      color: white;
+      text-align: justify;
+    }
+    /*Переключатель стилей 1 блок*/
+    .button3 {
+      border-radius: 50%;
+      background-color: #e7e7e7;
+      color: black;
+      border: 2px solid black;
+      font-size: 150%;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      display: inline-block;
+      margin-top: 4%;
+      margin-bottom: 1%;
+      text-decoration: none;
+    }
+    /*Наведение на переключатель стилей 1 блок*/
+    .button3:hover {
+      font-size: 150%;
+      border-radius: 50%;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      color: black;
+      text-decoration: none;
+    }
+  }
+  /*Автор цитаты*/
+  .pcite {
+    text-align: right;
+    padding-right: 6%;
+  }
+  /*5 Фон для блока с  Харьковом*/
+  .kharkiv {
+    height: auto;
+    background: url(./images/kharkiv2.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+  }
+  /*Контейнер для карусели*/
+  .container-myse {
+    max-width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /*Фон полупрозрачный под текстом*/
+  .text {
+    background-color: rgba(255, 255, 255, 0.23);
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  /*Поведение ссылки при наведении*/
+  .gmail:active {
+    color: black;
+    text-decoration: none;
+  }
+  .gmail:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .label-mod {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .label-mod input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(179, 113, 59);
+   
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1p rgb(179, 113, 59);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .container1{
+    margin-top:6%
+  }
